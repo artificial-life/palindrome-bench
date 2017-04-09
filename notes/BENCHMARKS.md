@@ -80,3 +80,5 @@ For loop initial x 23,675 ops/sec +0.86% (85 runs sampled)
 For loop opt x 41,404 ops/sec +0.68% (86 runs sampled)
 Fastest is For loop opt
 ```
+
+[Выводы](./SUMMARY.md)
