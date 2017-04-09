@@ -1,14 +1,23 @@
 const Benchmark = require('benchmark');
 const _ = require('lodash');
+const minimist = require('minimist');
+const opts = {
+  default: {
+    checker: "lite",
+    data: "./data.json"
+  }
+};
+const argv = minimist(process.argv.slice(2), opts);
 
-const strings = require('./data.json');
+const strings = require(`${argv.data}`);
 
-const isCorrect = require('./util/is-correct.js').lite;
+const isCorrect = require('./util/is-correct.js')[argv.checker];
 
 const forLoop = require('./for-loop/index.js')(isCorrect);
 const whileLoop = require('./while-loop/index.js')(isCorrect);
 
 const suite = new Benchmark.Suite;
+
 suite.add('While loop initial', function() {
   var item = _.sample(strings);
   whileLoop.initial(item);

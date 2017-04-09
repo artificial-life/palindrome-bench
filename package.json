@@ -21,6 +21,7 @@
   "homepage": "https://github.com/artificial-life/palindrome-bench#readme",
   "dependencies": {
     "benchmark": "^2.1.4",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0"
   }
 }
