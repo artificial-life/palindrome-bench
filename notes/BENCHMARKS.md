@@ -1,4 +1,4 @@
-[Выводы для нетерпеливых](/SUMMARY.md)
+[Выводы для нетерпеливых](./SUMMARY.md)
 
 > node .\index.js --checker=lite
 
